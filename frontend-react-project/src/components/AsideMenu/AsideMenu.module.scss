@@ -1,7 +1,14 @@
 .aside-menu {
   padding: 15px;
-  width: 200px;
+  width: 250px;
   background-color: #ddd;
+  position: relative;
+  
+  &__nav-wrapper {
+    position: sticky;
+    top:60px;
+    left:0;
+  }
   
   &__title {
     margin-top: 20px;
