@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 
 import Courses from '../Courses';
 import Error404 from '../Error404';
+import UserCourses from '../UserCourses/UserCourses';
 
 import bemCssModules from 'bem-css-modules';
 import * as types  from '../../helpers/consts';
@@ -22,7 +23,7 @@ const Content = () => {
     <main className={block()}>
         <Routes>
           <Route path='/' element={<Courses/>}/>
-          { isUserLogged && <Route  path='/my-courses' element={<p>Moje kursy</p>}/>}
+          { isUserLogged && <Route  path='/my-courses' element={ <UserCourses/> }/>}
           { isAdminLogged && <Route path='/manage-courses' element={<p>Zarzadzanie kursami</p>}/>}
           <Route path='*' element={<Error404/>} />
         </Routes>
